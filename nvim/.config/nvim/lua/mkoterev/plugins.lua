@@ -6,7 +6,10 @@ require('packer').startup(function(use)
     use 'nvim-lua/popup.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'kyazdani42/nvim-web-devicons'
-    use 'nvim-telescope/telescope.nvim'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     -- Theme
