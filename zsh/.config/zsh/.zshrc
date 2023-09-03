@@ -10,6 +10,8 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "$ZDOTDIR/aliases.zsh"
 plug "/usr/share/fzf/key-bindings.zsh" 
 
+HISTFILE="$XDG_DATA_HOME/zsh_history"
+
 # Run ssh-agent
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 3h > "$XDG_RUNTIME_DIR/ssh-agent.env"
