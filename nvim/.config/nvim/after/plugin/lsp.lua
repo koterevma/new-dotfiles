@@ -41,6 +41,9 @@ lspconfig.lua_ls.setup {
 lspconfig.clangd.setup {
     capabilities = capabilities
 }
+lspconfig.gopls.setup {
+    capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

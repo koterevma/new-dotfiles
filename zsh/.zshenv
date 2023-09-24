@@ -1,7 +1,3 @@
-if ! (printenv PATH | grep '\.local/bin' 2>&1 >/dev/null); then
-    export PATH="$HOME/.local/bin:$PATH"
-fi
-
 # Regular environment variables
 export EDITOR="nvim"
 export MAKEFLAGS="-j$(nproc)"

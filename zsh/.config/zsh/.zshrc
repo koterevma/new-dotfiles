@@ -20,6 +20,13 @@ if [[ ! "$SSH_AUTH_SOCK" ]]; then
     source "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
 fi
 
+# Set PATH if not already
+if ! (printenv PATH | grep '\.local/bin' 2>&1 >/dev/null); then
+    export PATH="$HOME/.local/bin:$PATH"
+fi
+
+export PATH="$GOPATH/bin:$PATH"
+
 # Not in env because it should update for every shell
 export GPG_TTY="$(tty)"  # Gpg fix problem with signing
 
