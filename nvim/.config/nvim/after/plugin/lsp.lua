@@ -44,6 +44,9 @@ lspconfig.clangd.setup {
 lspconfig.gopls.setup {
     capabilities = capabilities
 }
+lspconfig.rust_analyzer.setup {
+    capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

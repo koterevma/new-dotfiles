@@ -18,7 +18,9 @@ o.signcolumn = "yes"
 o.colorcolumn = "80"
 o.wrap = false
 o.hidden = true
-o.scrolloff=8
+o.scrolloff = 8
 o.hlsearch = false
 o.incsearch = true
 o.termguicolors = true
+o.list = true
+o.listchars = { tab = '> ', trail = '-', nbsp = '+' }

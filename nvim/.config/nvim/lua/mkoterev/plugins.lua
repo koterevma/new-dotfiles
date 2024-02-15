@@ -16,6 +16,7 @@ require('packer').startup(function(use)
     --use 'gruvbox-community/gruvbox'
     use 'ellisonleao/gruvbox.nvim'
     use 'mhartington/oceanic-next'
+    use { 'catppuccin/nvim', as = 'catppuccin' }
     use 'sainnhe/everforest'
     use 'folke/tokyonight.nvim'
 
