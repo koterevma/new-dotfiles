@@ -33,3 +33,7 @@ export GPG_TTY="$(tty)"  # Gpg fix problem with signing
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
+
+if test -x "/usr/bin/zoxide"; then
+    eval "$(zoxide init zsh --cmd=cd)"
+fi
