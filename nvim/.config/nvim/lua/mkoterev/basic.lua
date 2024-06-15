@@ -1,7 +1,7 @@
 local o = vim.opt
 
-vim.g.mapleader = " "
-o.encoding = "utf-8"
+vim.g.mapleader = ' '
+o.encoding = 'utf-8'
 o.number = true
 o.relativenumber = true
 
@@ -12,10 +12,10 @@ o.expandtab = true
 
 o.autoindent = true
 o.smartindent = true
-o.guicursor = ""
+o.guicursor = ''
 
-o.signcolumn = "yes"
-o.colorcolumn = "80"
+o.signcolumn = 'yes'
+o.colorcolumn = '80'
 o.wrap = false
 o.hidden = true
 o.scrolloff = 8

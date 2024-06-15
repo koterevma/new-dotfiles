@@ -39,3 +39,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 bindkey -e
+bindkey "\e[3~" delete-char
+
+WORDCHARS=${WORDCHARS/\/}  # Remove "/" from wordchars - bash-like delete-word
