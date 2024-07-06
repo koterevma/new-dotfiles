@@ -42,3 +42,8 @@ bindkey -e
 bindkey "\e[3~" delete-char
 
 WORDCHARS=${WORDCHARS/\/}  # Remove "/" from wordchars - bash-like delete-word
+
+# ----------------------------------------------------------------------------
+
+# Set gpg tty
+export GPG_TTY=$(tty)
