@@ -60,17 +60,20 @@ return {
                         luasnip.lsp_expand(args.body)
                     end,
                 },
-                sources = {
-                    { name = 'nvim_lsp' },
+                sources = cmp.config.sources({
                     { name = 'buffer' },
-                    { name = 'path' }
-                },
+                    { name = 'nvim_lsp' },
+                    { name = 'path' },
+                    { name = 'luasnip' }
+                }, {
+                    { name = 'buffer' }
+                }),
 
                 mapping = cmp.mapping.preset.insert({
                     ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
                     ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
-                    ['<C-j>'] = cmp.mapping.select_next_item(),
-                    ['<C-k>'] = cmp.mapping.select_prev_item(),
+                    -- ['<C-j>'] = cmp.mapping.select_next_item(),
+                    -- ['<C-k>'] = cmp.mapping.select_prev_item(),
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<CR>'] = cmp.mapping.confirm {
                         behavior = cmp.ConfirmBehavior.Replace,
@@ -80,4 +83,11 @@ return {
             }
         end
     },
+    {
+        'stevearc/oil.nvim',
+        config = function ()
+            require("oil").setup()
+        end,
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    }
 }
