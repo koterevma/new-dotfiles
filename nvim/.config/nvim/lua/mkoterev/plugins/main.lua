@@ -43,12 +43,7 @@ return {
     },
 
     -- Lsp setup
-    'L3MON4D3/LuaSnip',
     'neovim/nvim-lspconfig', -- Setup in after/plugin/lsp.lua
-    'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp,
-    'hrsh7th/cmp-path',
-    'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-    'L3MON4D3/LuaSnip', -- Snippets plugin
     {
         'hrsh7th/nvim-cmp', -- Autocompletion plugin,
         config = function()
@@ -61,7 +56,7 @@ return {
                     end,
                 },
                 sources = cmp.config.sources({
-                    { name = 'buffer' },
+                    -- { name = 'buffer' },
                     { name = 'nvim_lsp' },
                     { name = 'path' },
                     { name = 'luasnip' }
@@ -81,7 +76,14 @@ return {
                     },
                 }),
             }
-        end
+        end,
+        dependencies = {
+            'L3MON4D3/LuaSnip',
+            'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp,
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-buffer',
+            'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+        }
     },
     {
         'stevearc/oil.nvim',
