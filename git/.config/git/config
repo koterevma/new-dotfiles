@@ -1,8 +1,11 @@
 [user]
 	email = makoterev@gmail.com
 	name = Maksim Koterev
+	signingkey = AFFBA15A3945DA5D57341338568AAC1F751340F7
 [init]
 	defaultBranch = master
 [alias]
     st = status
     ci = commit
+[commit]
+    gpgsign = true
