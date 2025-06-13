@@ -5,7 +5,8 @@ local servers = {
     'clangd',
     'lua_ls',
     'pyright',
-    'bufls',
+    'buf_ls',
+    'rust_analyzer',
 }
 
 for _, lsp in ipairs(servers) do
